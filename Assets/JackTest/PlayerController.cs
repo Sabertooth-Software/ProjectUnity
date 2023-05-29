@@ -21,8 +21,7 @@ namespace JackTest
 
         void FixedUpdate()
         {
-            Vector3 adjustedMoveVector = new Vector3(_input.MoveVector.x, 0,  _input.MoveVector.y);
-            _rb.AddForce(adjustedMoveVector * speed, ForceMode.Force);
+            _rb.AddForce(_input.MoveVector * speed, ForceMode.Force);
         }
     }
 }
