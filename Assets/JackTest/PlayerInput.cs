@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 namespace JackTest
 {
     public class PlayerInput : MonoBehaviour
     {
         public Vector3 MoveVector { get; private set; }
+        public InputAction playCardAction;
     
         private PlayerInputActions _actions;
         private InputAction _moveAction;
@@ -14,7 +16,8 @@ namespace JackTest
         {
             MoveVector = new Vector3();
             _actions = new PlayerInputActions();
-        
+
+            playCardAction = _actions.Gameplay.PlayCard;
             _moveAction = _actions.Gameplay.Move;
         }
 
