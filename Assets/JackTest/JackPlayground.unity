@@ -638,7 +638,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6138014987421955617, guid: 361c997c2283a024eb64677e581c671a, type: 3}
       propertyPath: DrawPile.Array.size
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6138014987421955617, guid: 361c997c2283a024eb64677e581c671a, type: 3}
       propertyPath: DrawPile.Array.data[0]
@@ -646,6 +646,22 @@ PrefabInstance:
       objectReference: {fileID: 680360044}
     - target: {fileID: 6138014987421955617, guid: 361c997c2283a024eb64677e581c671a, type: 3}
       propertyPath: DrawPile.Array.data[1]
+      value: 
+      objectReference: {fileID: 1782895147}
+    - target: {fileID: 6138014987421955617, guid: 361c997c2283a024eb64677e581c671a, type: 3}
+      propertyPath: DrawPile.Array.data[2]
+      value: 
+      objectReference: {fileID: 680360044}
+    - target: {fileID: 6138014987421955617, guid: 361c997c2283a024eb64677e581c671a, type: 3}
+      propertyPath: DrawPile.Array.data[3]
+      value: 
+      objectReference: {fileID: 1782895147}
+    - target: {fileID: 6138014987421955617, guid: 361c997c2283a024eb64677e581c671a, type: 3}
+      propertyPath: DrawPile.Array.data[4]
+      value: 
+      objectReference: {fileID: 680360044}
+    - target: {fileID: 6138014987421955617, guid: 361c997c2283a024eb64677e581c671a, type: 3}
+      propertyPath: DrawPile.Array.data[5]
       value: 
       objectReference: {fileID: 1782895147}
     - target: {fileID: 8634308610010741084, guid: 361c997c2283a024eb64677e581c671a, type: 3}
