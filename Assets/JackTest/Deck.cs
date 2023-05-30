@@ -14,12 +14,12 @@ namespace JackTest
     }
     public class Deck : MonoBehaviour
     {
-        public List<Card> DrawPile = new List<Card>();
+        public List<Card> drawPile = new List<Card>();
         public List<Card> Hand { get; private set; }
         public List<Card> DiscardPile { get; private set; }
-        public int HandSize = 5;
+        public int handSize = 5;
         
-        public List<Card> AllCards => (List<Card>) DrawPile.Concat(DiscardPile);
+        public List<Card> AllCards => (List<Card>) drawPile.Concat(DiscardPile);
         public CardEvent playCard;
 
         void Awake()
@@ -36,7 +36,7 @@ namespace JackTest
 
         public void AddCard(Card newCard)
         {
-            DrawPile.Add(newCard);
+            drawPile.Add(newCard);
         }
 
         public void Use()
@@ -54,19 +54,19 @@ namespace JackTest
         
         public void Draw()
         {
-            if (DrawPile.Count <= 0)
+            if (drawPile.Count <= 0)
             {
                 return;
             }
-            Card draw = DrawPile.First();
-            DrawPile.Remove(draw);
+            Card draw = drawPile.First();
+            drawPile.Remove(draw);
             Hand.Add(draw);
             playCard.Invoke(draw);
         }
 
         private void FillHand()
         {
-            foreach (int i in Enumerable.Range(1, HandSize))
+            foreach (int i in Enumerable.Range(1, handSize))
             {
                 Draw();
             }

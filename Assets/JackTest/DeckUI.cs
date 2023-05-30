@@ -25,7 +25,7 @@ public class DeckUI : MonoBehaviour
 
     void UpdateUI(Card card)
     {
-        int drawCardsLeft = deck.DrawPile.Count;
+        int drawCardsLeft = deck.drawPile.Count;
         drawPile.text = drawCardsLeft.ToString();
         
         int discardCardsLeft = deck.DiscardPile.Count;
