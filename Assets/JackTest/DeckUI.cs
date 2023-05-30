@@ -1,41 +1,47 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using System.Linq;
 using JackTest;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DeckUI : MonoBehaviour
 {
-    public Deck Deck;
+    public Deck deck;
 
     [SerializeField] TMP_Text drawPile;
     [SerializeField] TMP_Text discardPile;
     [SerializeField] TMP_Text hand;
+    [SerializeField] Image currentCard;
 
     void Start()
     {
-        if (Deck != null)
+        if (deck != null)
         {
-            Deck.playCard.AddListener(OnPlayCard);
-            UpdateUI();
+            deck.playCard.AddListener(OnPlayCard);
+            Card firstCard = deck.Hand.First();
+            UpdateUI(firstCard);
         }
     }
 
-    void UpdateUI()
+    void UpdateUI(Card card)
     {
-        int drawCardsLeft = Deck.DrawPile.Count;
+        int drawCardsLeft = deck.DrawPile.Count;
         drawPile.text = drawCardsLeft.ToString();
         
-        int discardCardsLeft = Deck.DiscardPile.Count;
+        int discardCardsLeft = deck.DiscardPile.Count;
         discardPile.text = discardCardsLeft.ToString();
 
-        int numCardsInHand = Deck.Hand.Count;
+        int numCardsInHand = deck.Hand.Count;
         hand.text = numCardsInHand.ToString();
+
+        if (numCardsInHand > 0)
+        {
+            currentCard.sprite = deck.Hand.First().image;
+        }
     }
 
     void OnPlayCard(Card card)
     {
-        UpdateUI();
+        UpdateUI(card);
     }
 }
