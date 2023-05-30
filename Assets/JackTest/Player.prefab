@@ -37,7 +37,7 @@ Transform:
   m_Children:
   - {fileID: 1538017165827436738}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5176897759841157780
 MeshFilter:
@@ -124,6 +124,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eca96755a7895f44c8cc2adf0164eeb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playCardAction:
+    m_Name: Play Card
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 43bc6c02-7bc4-49e2-ad38-56adccefc335
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!114 &5161378096580496203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 844925ce5247310439424164bfdb71e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayCard:
+  playCard:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &6082518393975965312
