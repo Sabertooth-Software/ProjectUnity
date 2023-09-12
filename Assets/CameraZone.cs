@@ -7,6 +7,7 @@ namespace GTest
     public class CameraZone : MonoBehaviour
     {
         public GameObject cam;
+        
         void OnTriggerEnter(Collider collision)
         {
             if (collision.gameObject.tag == "Player")
