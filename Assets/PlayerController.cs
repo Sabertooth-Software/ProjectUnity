@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,6 +31,10 @@ namespace GTest
             float horizontal = Input.GetAxisRaw("Horizontal");
             float vertical = Input.GetAxisRaw("Vertical");
             direction = new Vector3(horizontal, 0f, vertical).normalized;
+
+            if (Input.GetKeyDown("g")){
+                Debug.Log("button");
+            }
 
             if (direction.magnitude >= 0.1f)
             {
